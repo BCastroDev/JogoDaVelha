@@ -16,6 +16,11 @@ function tocar(){
     aplauso.play()
 }
 
+function peido(){ 
+    let peido = document.getElementById("peido")
+    peido.play()
+}
+
 function click(){ 
     let click = document.getElementById("click")
     click.play()
@@ -154,6 +159,7 @@ function ngVenceu(){
     campos[6] != "" &&
     campos[7] != "" && 
     campos[8] != "" ) { 
+    peido()
     setTimeout(()=>{alert("Ninguém Venceu")},100);
     zerar() }
 }
