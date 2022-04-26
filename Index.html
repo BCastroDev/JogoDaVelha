@@ -13,23 +13,28 @@
 <body>
 
     <audio id="aplausos" src="./songs/Applause.mp3"></audio>
+    <audio id="click" src="./songs/CLICK.wav"></audio>
     
     <div class="topo">
         <h3>Jogador 1:
             <select onchange="alterarJogador" name="jogadorSel1" id="jogadorSel1">
-                <option value="Alice">Alice</option>
                 <option value="">SELECIONE</option>
+                <option value="Alice">Alice</option>
                 <option value="Bruno">Bruno</option>
                 <option value="Larissa">Larissa</option>
+                <option value="Gisele">Gisele</option>
+                <option value="Tiquinha">Tiquinha</option>
             </select>
         </h3>
         
         <h3>Jogador 2:
             <select onchange="alterarJogador()" name="jogadorSel2" id="jogadorSel2">
-                <option value="Bruno">Bruno</option>
                 <option value="">SELECIONE</option>
+                <option value="Bruno">Bruno</option>
                 <option value="Alice">Alice</option>
                 <option value="Larissa">Larissa</option>
+                <option value="Gisele">Gisele</option>
+                <option value="Tiquinha">Tiquinha</option>
             </select>
         </h3>
     </div>

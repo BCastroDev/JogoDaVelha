@@ -12,9 +12,13 @@ const pontosJog = "pontosJog"
 let jogadoresSelecionados = false
 
 function tocar(){ 
-
     let aplauso = document.getElementById("aplausos")
     aplauso.play()
+}
+
+function click(){ 
+    let click = document.getElementById("click")
+    click.play()
 }
 
 function jogadorOk(){
@@ -52,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function clicou(event) { 
 
     jogadorOk()
+    click()
 
     if(acabou) {
         return
