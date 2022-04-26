@@ -11,6 +11,12 @@ let quad2 = " quadradoPonto"
 const pontosJog = "pontosJog"
 let jogadoresSelecionados = false
 
+function tocar(){ 
+
+    let aplauso = document.getElementById("aplausos")
+    aplauso.play()
+}
+
 function jogadorOk(){
     if(jog1 == "" || jog2 ==""){
         jogadoresSelecionados = false
@@ -105,16 +111,28 @@ for (let i = 0 ; i < sequenciasVencedoras.length ; i++) {
         
         acabou = true
 
-        alert("O Jogador " + document.getElementById("jogadorSel" + playerTime).value + " Venceu!" );
+
 
         if (playerTime == 1) {
         pontosJog1++
         document.getElementById("pontos1").innerHTML = pontosJog1;
+
+        setTimeout(() => {
+            alert("O Jogador " + document.getElementById("jogadorSel1").value + " Venceu!" );
+        }, 100);
+
+        tocar()
         zerar();
         }
         if (playerTime == 2){
             pontosJog2++
             document.getElementById("pontos2").innerHTML = pontosJog2;
+
+            setTimeout(() => {
+                alert("O Jogador " + document.getElementById("jogadorSel2").value + " Venceu!" );
+            }, 100);
+            
+            tocar()
             zerar();
 
         }
