@@ -5,6 +5,7 @@ let acabou = false;
 let jog1 = ""
 let jog2 = ""
 let quad = " quadrado"
+let quad2 = " quadradoPonto"
 let jogadoresSelecionados = false
 
 function jogadorOk(){
@@ -19,8 +20,10 @@ function jogadorOk(){
 function alterarJogador(){
     jog1 = "jg" + document.getElementById("jogadorSel1").value + quad;
     jog2 = "jg" + document.getElementById("jogadorSel2").value + quad;
+    console.log(jog1 , jog2)
+    document.getElementById("JogadorFoto1").className = "jg" + document.getElementById("jogadorSel1").value + quad2
+    document.getElementById("JogadorFoto2").className = "jg" + document.getElementById("jogadorSel2").value + quad2
     jogadorOk()
-console.log(jog1 , jog2)
 }
 
 document.addEventListener('change', ()=>alterarJogador())
