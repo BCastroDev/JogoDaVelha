@@ -4,8 +4,11 @@ let campos = ["","","","","","","","",""];
 let acabou = false;
 let jog1 = ""
 let jog2 = ""
+let pontosJog1 = 0
+let pontosJog2 = 0
 let quad = " quadrado"
 let quad2 = " quadradoPonto"
+const pontosJog = "pontosJog"
 let jogadoresSelecionados = false
 
 function jogadorOk(){
@@ -102,8 +105,19 @@ for (let i = 0 ; i < sequenciasVencedoras.length ; i++) {
         
         acabou = true
 
-        alert("O Jogador " + document.getElementById("jogadorSel" + playerTime).value + " Venceu!" )
+        alert("O Jogador " + document.getElementById("jogadorSel" + playerTime).value + " Venceu!" );
+
+        if (playerTime == 1) {
+        pontosJog1++
+        document.getElementById("pontos1").innerHTML = pontosJog1;
         zerar();
+        }
+        if (playerTime == 2){
+            pontosJog2++
+            document.getElementById("pontos2").innerHTML = pontosJog2;
+            zerar();
+
+        }
 }}}
 
 function ngVenceu(){
