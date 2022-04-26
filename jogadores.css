@@ -1,0 +1,54 @@
+.jgAlice {
+    position: relative;
+    background-image: url('assets/alice.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgAlice::after {
+    position: absolute;
+    font-size: 100px;
+    line-height: 200px;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.jgBruno {
+    position: relative;
+    background-image: url('assets/bruno.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgBruno::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
+
+}
+
+.jgLarissa {
+    position: relative;
+    background-image: url('assets/Larissa.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgLarissa::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
+
+}
