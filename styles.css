@@ -50,24 +50,18 @@ div {
 .pontuacao{
 
     padding: 20px;
-    display: inline-block;
-    background-color: rgb(173, 228, 255);
-    height: 9em;
-    width: 15em;
-    border-radius: 30px;
-    margin-left: 30px;
-    margin-top: 5px;
 
-    align-items: center;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
+    background-color: rgb(173, 228, 255);
+    border-radius: 10px;
+    margin-left: 20px;
+
     }
 
 .quadradoPonto {
 
-    width: 5em;
-    height: 5em;
-    background-color: rgb(11, 141, 167);
+    width: 4em;
+    height: 4em;
+    /* background-color: rgb(11, 141, 167); */
     margin: 5px;
     display: inline-flex;
 }
