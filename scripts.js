@@ -31,6 +31,7 @@ function click(){
 function jogadorOk(){
     if(jog1 == "" || jog2 ==""){
         jogadoresSelecionados = false
+    
     }
     else {
         jogadoresSelecionados = true
@@ -84,7 +85,7 @@ function clicou(event) {
         return
     }
 
-    if(!jogadoresSelecionados){
+    if(jogadoresSelecionados){
         alert("Selecione os jogadores")
         return
     }
