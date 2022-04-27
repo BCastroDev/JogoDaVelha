@@ -2,8 +2,8 @@ var playerTime = 1;
 var varAserVerificada = false;
 let campos = ["","","","","","","","",""];
 let acabou = false;
-let jog1 = "jg" + document.getElementById("jogadorSel1").value
-let jog2 = "jg" + document.getElementById("jogadorSel2").value
+let jog1 = "" 
+let jog2 = ""
 let pontosJog1 = 0
 let pontosJog2 = 0
 let quad = " quadrado"
@@ -11,40 +11,43 @@ let quad2 = " quadradoPonto"
 const pontosJog = "pontosJog"
 let jogadoresSelecionados = false
 
-function tocar(){ 
+function tocar(){ //apenas som
     let aplauso = document.getElementById("aplausos")
     aplauso.play()
 }
 
-function peido(){ 
+function peido(){ //apenas som
     let peido = document.getElementById("peido")
     peido.play()
 }
 
-function click(){ 
-    
+function click(){ //apenas som
+
     let click = document.getElementById("click")
     click.play()
-    alterarVez()
-}
+    }
 
-function jogadorOk(){
+function jogadorOk(){ //testa se jog OU jog2 estão vazios
     if(jog1 == "" || jog2 ==""){
-        jogadoresSelecionados = false
+        console.log("Jogadores não selecionados")
+        return
     
     }
     else {
         jogadoresSelecionados = true
+        console.log("teste de jogadores ok")
     }
 }
+jogadorOk()
 
 function alterarJogador(){
+
     jog1 = "jg" + document.getElementById("jogadorSel1").value
     jog2 = "jg" + document.getElementById("jogadorSel2").value
     console.log(jog1 , jog2)
     document.getElementById("JogadorFoto1").className = "jg" + document.getElementById("jogadorSel1").value + quad2 + " jogadorDaVez"
     document.getElementById("JogadorFoto2").className = "jg" + document.getElementById("jogadorSel2").value + quad2
-    jogadorOk()
+
 }
 
 function alterarVez(){
@@ -77,38 +80,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function clicou(event) { 
 
-    jogadorOk()
     click()
+    jogadorOk()
 
+        if(!jogadoresSelecionados) {
+            alert("Selecione os jogadores")
+            return
+        }
 
-    if(acabou) {
-        return
-    }
-
-    if(jogadoresSelecionados){
-        alert("Selecione os jogadores")
-        return
-    }
-
-    if (campos[event.target.id -1] == "" && playerTime == 1) { 
+        else if (campos[event.target.id -1] == "" && playerTime == 1) { 
         event.target.className =  jog1 + quad ;
         campos[event.target.id -1] = playerTime
         alguemGanhou()
         ngVenceu()
+        alterarVez()
         playerTime = 2 ;
+        console.log("caiu no 2")
 
     }
+
     else if (campos[event.target.id -1] == "" && playerTime == 2) { 
         event.target.className = jog2 + quad ;
         campos[event.target.id -1] = playerTime
         alguemGanhou()
         ngVenceu()
+        alterarVez()
         playerTime = 1;
+        console.log("caiu no 3")
     }
 
     else {
         alert("Tá cego?")
-        console.log(campos)}
+        console.log("deu erro 1" + campos)}
 }
 
 function alguemGanhou(){
