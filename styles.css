@@ -1,3 +1,10 @@
+@keyframes fadein {
+    from { background-color: yellow; }
+    to   { background-color: orange; }
+
+}
+
+
 *{
     font-family: arial;
 }
@@ -10,6 +17,19 @@ div {
     border-radius: 15px;
 }
 
+
+.topo {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+
+    height: 3em;
+    margin: auto;
+    background-color: #193853;
+    color: yellow;
+
+}
+
 .base {
     display: inline-block;
     background-color: rgb(255, 255, 255);
@@ -17,42 +37,42 @@ div {
 }
 
 .quadrado {
-    width: 25vh;
-    height: 25vh;
+    width: 5em;
+    height: 5em;
     background-color: rgb(209, 62, 106);
-    margin: 5px;
+    /* margin: 5px; */
     display: inline-block;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
 }
 
-@keyframes fadein {
-    from { background-color: yellow; }
-    to   { background-color: orange; }
 
-}
+.pontuacao{
+
+    padding: 20px;
+    display: inline-block;
+    background-color: rgb(173, 228, 255);
+    height: 9em;
+    width: 15em;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-top: 5px;
+
+    align-items: center;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    }
 
 .quadradoPonto {
 
-    width: 15em;
-    height: 15em;
-    /* background-color: rgb(11, 141, 167); */
+    width: 5em;
+    height: 5em;
+    background-color: rgb(11, 141, 167);
     margin: 5px;
-    display: inline-block;
-
-
-
+    display: inline-flex;
 }
 
-.topo {
-    display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
-
-    height: 8vh;
-    margin: auto;
-    background-color: #193853;
-    color: yellow;
-
-}
+h4 { display: inline-flex;}
 
 .jogadorDaVez{
     border-radius: 50%; 
@@ -66,31 +86,6 @@ h3{
     margin: 10px;
 }
 
-h1 {
-    margin-top: -10px;
-}
-
-.pontuacao{
-
-    padding: 20px;
-    display: flexbox;
-    background-color: rgb(173, 228, 255);
-    height: 630px;
-    width: 400px;
-    border-radius: 30px;
-    margin-left: 30px;
-    margin-top: 5px;
-
-    align-items: center;
-    }
-
-    select {
-        font-size: 80%;
-    }
-
-    .titulo{
-        font-size: 150%;
-    }
 
 .meio {
     padding-top: 3vh;
