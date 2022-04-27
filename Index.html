@@ -17,7 +17,7 @@
     <audio id="peido" src="./songs/fart.mp3"></audio>
     
     <div class="topo">
-        <h3>Jogador 1:
+        <h3 class="titulo">Jogador 1:
             <select onchange="alterarJogador" name="jogadorSel1" id="jogadorSel1">
                 <option value="">SELECIONE</option>
                 <option value="Alice">Alice</option>
@@ -32,7 +32,7 @@
             </select>
         </h3>
         
-        <h3>Jogador 2:
+        <h3 class="titulo">Jogador 2:
             <select onchange="alterarJogador()" name="jogadorSel2" id="jogadorSel2">
                 <option value="">SELECIONE</option>
                 <option value="Alice">Alice</option>
@@ -72,8 +72,9 @@
         
         
     </div>
+
     <div class="pontuacao">
-        <div class="quadradoPonto" id="JogadorFoto1"></div><h1 id="pontos1">0</h1>
+        <div class="quadradoPonto" id="JogadorFoto1" >  </div><h1 id="pontos1">0</h1>
         <br>
         <hr>
         <br>

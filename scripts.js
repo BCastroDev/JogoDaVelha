@@ -2,8 +2,8 @@ var playerTime = 1;
 var varAserVerificada = false;
 let campos = ["","","","","","","","",""];
 let acabou = false;
-let jog1 = ""
-let jog2 = ""
+let jog1 = "jg" + document.getElementById("jogadorSel1").value
+let jog2 = "jg" + document.getElementById("jogadorSel2").value
 let pontosJog1 = 0
 let pontosJog2 = 0
 let quad = " quadrado"
@@ -22,8 +22,10 @@ function peido(){
 }
 
 function click(){ 
+    
     let click = document.getElementById("click")
     click.play()
+    alterarVez()
 }
 
 function jogadorOk(){
@@ -36,12 +38,26 @@ function jogadorOk(){
 }
 
 function alterarJogador(){
-    jog1 = "jg" + document.getElementById("jogadorSel1").value + quad;
-    jog2 = "jg" + document.getElementById("jogadorSel2").value + quad;
+    jog1 = "jg" + document.getElementById("jogadorSel1").value
+    jog2 = "jg" + document.getElementById("jogadorSel2").value
     console.log(jog1 , jog2)
-    document.getElementById("JogadorFoto1").className = "jg" + document.getElementById("jogadorSel1").value + quad2
+    document.getElementById("JogadorFoto1").className = "jg" + document.getElementById("jogadorSel1").value + quad2 + " jogadorDaVez"
     document.getElementById("JogadorFoto2").className = "jg" + document.getElementById("jogadorSel2").value + quad2
     jogadorOk()
+}
+
+function alterarVez(){
+    
+    if (playerTime == 1) {
+        document.getElementById("JogadorFoto1").className = jog1 + quad2 
+        document.getElementById("JogadorFoto2").className = jog2 + " jogadorDaVez quadradoPonto" 
+    }
+
+    if (playerTime == 2) {
+        document.getElementById("JogadorFoto2").className = jog2 + quad2 
+        document.getElementById("JogadorFoto1").className = jog1 + " jogadorDaVez quadradoPonto" 
+    }
+
 }
 
 document.addEventListener('change', ()=>alterarJogador())
@@ -63,6 +79,7 @@ function clicou(event) {
     jogadorOk()
     click()
 
+
     if(acabou) {
         return
     }
@@ -73,7 +90,7 @@ function clicou(event) {
     }
 
     if (campos[event.target.id -1] == "" && playerTime == 1) { 
-        event.target.className =  jog1  ;
+        event.target.className =  jog1 + quad ;
         campos[event.target.id -1] = playerTime
         alguemGanhou()
         ngVenceu()
@@ -81,7 +98,7 @@ function clicou(event) {
 
     }
     else if (campos[event.target.id -1] == "" && playerTime == 2) { 
-        event.target.className = jog2;
+        event.target.className = jog2 + quad ;
         campos[event.target.id -1] = playerTime
         alguemGanhou()
         ngVenceu()

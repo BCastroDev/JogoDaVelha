@@ -50,5 +50,116 @@ top:0;
 bottom: 0;
 right: 0;
 left: 0;
+}
 
+.jgGisele {
+    position: relative;
+    background-image: url('assets/Gisele.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgGisele::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
+.jgTiquinha {
+    position: relative;
+    background-image: url('assets/Tiquinha.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgTiquinha::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
+
+.jgNicolas {
+    position: relative;
+    background-image: url('assets/Nicolas.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgNicolas::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
+
+.jgHelena {
+    position: relative;
+    background-image: url('assets/Helena.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgHelena::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
+
+.jgManu {
+    position: relative;
+    background-image: url('assets/Manu.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgManu::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
+
+.jgVanessa {
+    position: relative;
+    background-image: url('assets/Vanessa.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.jgVanessa::after{
+    position: absolute;
+/* content: "\1F431"; */
+font-size: 100px;
+line-height: 200px;
+top:0;
+bottom: 0;
+right: 0;
+left: 0;
 }
